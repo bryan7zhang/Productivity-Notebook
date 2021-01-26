@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<diagram version="1" name="projects-ERD.erd">
+	<entities>
+		<data-source id="mysql8-1773b36c44f-49158ca18e4a002">
+			<entity id="1" name="client_info" fq-name="projectsdatabase.client_info" order="0" x="178" y="342">
+				<path name="projectsdatabase"/>
+			</entity>
+			<entity id="2" name="clients" fq-name="projectsdatabase.clients" order="1" x="339" y="314">
+				<path name="projectsdatabase"/>
+			</entity>
+			<entity id="3" name="developers" fq-name="projectsdatabase.developers" order="2" x="178" y="20">
+				<path name="projectsdatabase"/>
+			</entity>
+			<entity id="4" name="projects" fq-name="projectsdatabase.projects" order="3" x="178" y="162">
+				<path name="projectsdatabase"/>
+			</entity>
+			<entity id="5" name="projectdeveloper" fq-name="projectsdatabase.projectdeveloper" order="4" x="20" y="110">
+				<path name="projectsdatabase"/>
+			</entity>
+			<entity id="6" name="users" fq-name="projectsdatabase.users" order="5" x="339" y="191">
+				<path name="projectsdatabase"/>
+			</entity>
+		</data-source>
+	</entities>
+	<relations>
+		<relation name="client_info_fk_1" fq-name="projectsdatabase.client_info.client_info_fk_1" type="fk" pk-ref="2" fk-ref="1"/>
+		<relation name="projects_ibfk_1" fq-name="projectsdatabase.projects.projects_ibfk_1" type="fk" pk-ref="2" fk-ref="4"/>
+		<relation name="projectdeveloper_ibfk_2" fq-name="projectsdatabase.projectdeveloper.projectdeveloper_ibfk_2" type="fk" pk-ref="3" fk-ref="5"/>
+		<relation name="projectdeveloper_ibfk_1" fq-name="projectsdatabase.projectdeveloper.projectdeveloper_ibfk_1" type="fk" pk-ref="4" fk-ref="5"/>
+		<relation name="projects_ibfk_2" fq-name="projectsdatabase.projects.projects_ibfk_2" type="fk" pk-ref="6" fk-ref="4"/>
+	</relations>
+</diagram>

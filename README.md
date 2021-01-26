@@ -1,0 +1,2 @@
+# productivity_notebook
+Productivity Notebook is a web app that is used to manage projects in your spare time. The goal of this project is to create an API centric application composed of one core RESTful API web server and one client web app that consumes the APIs off of the server.
